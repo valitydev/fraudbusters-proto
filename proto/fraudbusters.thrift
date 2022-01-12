@@ -5,7 +5,7 @@ include 'domain.thrift'
  * Сервис поиска мошеннических операций.
  */
 
-namespace java com.rbkmoney.damsel.fraudbusters
+namespace java dev.vality.damsel.fraudbusters
 namespace erlang fraudbusters
 
 typedef string ID
