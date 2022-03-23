@@ -249,11 +249,24 @@ union Resource {
     1: domain.BankCard bank_card
     2: CryptoWallet crypto_wallet
     3: DigitalWallet digital_wallet
+    4: GenericPaymentTool generic
 }
 
 struct CryptoWallet {
     1: required string id
     2: required string currency
+}
+
+struct GenericPaymentTool {
+    1: required string id
+    2: optional Content content
+}
+
+/** Набор данных, подлежащий интерпретации согласно типу содержимого. */
+struct Content {
+    /** Тип содержимого, согласно [RFC2046](https://www.ietf.org/rfc/rfc2046) */
+    1: required string type
+    2: required binary data
 }
 
 /**
