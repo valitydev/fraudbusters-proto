@@ -217,6 +217,7 @@ enum ChargebackCategory {
     dispute
     authorisation
     processing_error
+    system_set
 }
 
 struct Chargeback {
