@@ -371,6 +371,7 @@ union ResultStatus {
     6: HighRisk high_risk
     7: Normal normal
     8: Notify notify
+    9: Trust trust
 }
 
 struct Accept {}
@@ -381,6 +382,7 @@ struct DeclineAndNotify {}
 struct HighRisk {}
 struct Normal {}
 struct Notify {}
+struct Trust {}
 
 struct ConcreteCheckResult {
     1: required ResultStatus result_status
