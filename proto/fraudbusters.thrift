@@ -10,7 +10,7 @@ namespace erlang fraudbusters
 
 typedef string ID
 typedef ID AccountID
-typedef ID IdentityID
+typedef ID PartyID
 typedef ID WalletID
 typedef i32 ProviderID
 typedef i32 TerminalID
@@ -18,6 +18,11 @@ typedef i32 TerminalID
 enum CommandType {
     CREATE
     DELETE
+}
+
+enum Realm {
+    test
+    live
 }
 
 union CommandBody {
@@ -280,9 +285,10 @@ struct DigitalWallet {
 }
 
 struct Account {
-    3: required AccountID id
-    1: required IdentityID identity
+    1: required AccountID id
     2: required domain.CurrencyRef currency
+    3: optional PartyID party_id
+    4: required Realm realm
 }
 
 enum WithdrawalStatus {
