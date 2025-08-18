@@ -10,7 +10,6 @@ namespace erlang fraudbusters
 
 typedef string ID
 typedef ID AccountID
-typedef ID IdentityID
 typedef ID WalletID
 typedef i32 ProviderID
 typedef i32 TerminalID
@@ -280,8 +279,7 @@ struct DigitalWallet {
 }
 
 struct Account {
-    3: required AccountID id
-    1: required IdentityID identity
+    1: required AccountID id
     2: required domain.CurrencyRef currency
 }
 
