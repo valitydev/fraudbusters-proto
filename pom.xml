@@ -53,11 +53,10 @@
             <plugin>
                 <groupId>org.apache.thrift</groupId>
                 <artifactId>thrift-maven-plugin</artifactId>
-                <version>0.11.0</version>
+                <version>0.10.0</version>
                 <configuration>
                     <generator>java:fullcamel,jakarta_annotations,option_type=jdk8,optional_getters=false</generator>
                     <thriftSourceRoot>${project.basedir}/proto</thriftSourceRoot>
-                    <thriftExecutable></thriftExecutable>
                 </configuration>
                 <executions>
                     <execution>
