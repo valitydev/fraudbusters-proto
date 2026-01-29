@@ -55,8 +55,9 @@
                 <artifactId>thrift-maven-plugin</artifactId>
                 <version>0.10.0</version>
                 <configuration>
-                    <generator>java:fullcamel,jakarta_annotations,option_type=jdk8,nullable</generator>
+                    <generator>java:fullcamel,jakarta_annotations</generator>
                     <thriftSourceRoot>${project.basedir}/proto</thriftSourceRoot>
+                    <thriftExecutable>${path_to_thrift}</thriftExecutable>
                 </configuration>
                 <executions>
                     <execution>
