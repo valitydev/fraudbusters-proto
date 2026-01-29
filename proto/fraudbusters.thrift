@@ -436,6 +436,35 @@ exception HistoricalDataServiceException {
     2: optional string reason
 }
 
+struct ShopContext {
+    // Идентификатор party
+    1: required ID party_id
+    // Идентификатор магазина
+    2: required ID shop_id
+}
+
+struct InspectUserContext {
+    1: required ClientInfo user_info
+    2: required list<ShopContext> shop_list
+}
+
+struct BlockedShops {
+    1: required list<ShopContext> shop_list
+}
+
+/**
+* Интерфейс для проверки
+*/
+service InspectorService {
+
+    /**
+    * Проверяет какие магазины недоступны для оплаты пользователю
+    **/
+    BlockedShops InspectUserShops (1: InspectUserContext context)
+        throws (1: base.InvalidRequest ex1)
+
+}
+
 /**
 * Интерфейс для управления FraudoPayment
 */
