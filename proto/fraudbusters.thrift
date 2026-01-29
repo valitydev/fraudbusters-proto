@@ -460,7 +460,7 @@ service InspectorService {
     /**
     * Проверяет какие магазины недоступны для оплаты пользователю
     **/
-    BlockedShops InspectUser (1: InspectUserContext context)
+    BlockedShops InspectUserShops (1: InspectUserContext context)
         throws (1: base.InvalidRequest ex1)
 
 }
