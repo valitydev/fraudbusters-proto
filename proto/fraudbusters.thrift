@@ -6,7 +6,7 @@ include 'domain.thrift'
  */
 
 namespace java dev.vality.damsel.fraudbusters
-namespace erlang fraudbusters
+namespace erlang fb_proto.fraudbusters
 
 typedef string ID
 typedef ID AccountID
