@@ -308,6 +308,8 @@ struct Filter {
     10: optional base.TimestampInterval interval
     11: optional string invoice_id
     12: optional string masked_pan
+    13: optional string template
+    14: optional string rule
 }
 
 struct Page {

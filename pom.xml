@@ -80,6 +80,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
                             <relocations>
                                 <relocation>
                                     <pattern>dev.vality.fraudbusters</pattern>
